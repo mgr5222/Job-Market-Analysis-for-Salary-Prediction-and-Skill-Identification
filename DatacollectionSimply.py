@@ -37,32 +37,35 @@ def simplyScrape(url, choptions):
             
         # scan through 10 pages for final test  
         # REMEBER TO CHANGE THIS VARIABLE  
-        for _ in range(2):
+        for _ in range(3):
             WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.TAG_NAME, "body")))
 
             # create a list of buttons that the website uses
             job_title_buttons = driver.find_elements(By.XPATH, '//a[@class="chakra-button css-1djbb1k"]')
+           
             # iterate through buttons to find information about jobs
             for button in job_title_buttons:
+                
                 button.click()
-                WebDriverWait(driver, 10).until(EC.visibility_of_all_elements_located((By.TAG_NAME, "aside"))) # wait for job information to appear
-
-                location = driver.find_element(By.XPATH, '//span[@data-testid="viewJobCompanyLocation"]')
-                locations.append(location.text)
-                print(locations)
-
-            
+                
             try:
-                # Locate the "Next" button each time before clicking
-                next_button = WebDriverWait(driver, 10).until(
-                    EC.element_to_be_clickable((By.XPATH, '//a[@class="chakra-link css-1puj5o8"]'))
-                )
-                next_button.click()
-                time.sleep(2)  # Give time for the page to load after clicking
-
+                
+                WebDriverWait(driver, 10).until(
+                    EC.visibility_of_all_elements_located((By.TAG_NAME, "aside"))) # wait for job information to appear
+  
             except Exception as e:
                 print(f"Could not click Next button: {e}")
                 break  # Stop if the button cannot be clicked
+        
+            # Locate the "Next" button each time before clicking
+            next_button = WebDriverWait(driver, 10).until(
+                EC.element_to_be_clickable((By.XPATH, '//a[@aria-label="Next page"]'))
+            )
+            #location = driver.find_element(By.XPATH, '//div[@data-testid="viewJobCompanyDetailsContainer"]')
+            #locations.append(location.text)
+            #print(locations)
+            next_button.click()
+            time.sleep(2)  # Give time for the page to load after clicking
 
 
     except Exception as e:
