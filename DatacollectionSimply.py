@@ -53,8 +53,12 @@ def simplyScrape(url, choptions):
                 # print(locations)
                 Qualifications = driver.find_elements(By.XPATH, '//span[@data-testid="viewJobQualificationItem"]') # retrieve job qualifications
 
-                listing = []
-                
+                qualifications_text = [q.text for q in Qualifications]  # Extract text from qualifications
+                location_text = location.text  # Extract text from location
+
+                listing = []  
+                listing.append((location_text, qualifications_text))  # Append tuple of extracted text
+
             try:
                 
                 WebDriverWait(driver, 10).until(
