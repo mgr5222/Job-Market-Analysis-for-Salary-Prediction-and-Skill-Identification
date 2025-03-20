@@ -89,7 +89,7 @@ def scrape_simplyhired_jobs(url, chrome_options, max_pages=9, output_file="job_l
                     EC.element_to_be_clickable((By.XPATH, '//a[@aria-label="Next page"]'))
                 )
                 next_button.click()
-                time.sleep(2)  # Allow time for the page to load after clicking
+                time.sleep(1)  # Allow time for the page to load after clicking
             except Exception as e:
                 print(f"Could not click 'Next' button: {e}")
                 break  # Stop if pagination fails

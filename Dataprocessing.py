@@ -1,4 +1,5 @@
 import pandas as pd
+from pandas import *
 import ast
 import re
 
@@ -49,31 +50,32 @@ df["Qualifications"] = df["Qualifications"].apply(parse_qualifications)
 
 # Convert salary to yearly average
 def clean_salary(salary):
-    salary = str(salary).split("\n")[-1]  # Take last part (Removes job type if present)
-    salary = re.sub(r"[^0-9\-\$ ]", "", salary).strip()  # Keep only salary range
+    # Remove non-numeric, non-dollar, and non-space characters
+    salary = re.sub(r"[^0-9\-\$K ]", "", salary).strip()
+    
+    
     
     if not salary:
         return "N/A"
     
-    # Convert hourly rate to yearly salary (assuming 40 hours/week, 52 weeks/year)
-    hourly_match = re.search(r"\$(\d+(?:,\d+)?) per hour", salary)
-    if hourly_match:
-        hourly_rate = float(hourly_match.group(1).replace(",", ""))
-        return f"{hourly_rate * 40 * 52:.2f}"
+        # Handle 'K' by appending three zeros to the number
+    if 'K' in salary:
+        salary = re.sub(r"(\d+)K", lambda m: str(int(m.group(1)) * 1000), salary)
     
-    # Convert salary range to average
-    range_match = re.findall(r"\$(\d+(?:,\d+)?)", salary)
-    if len(range_match) == 2:
-        low = float(range_match[0].replace(",", ""))
-        high = float(range_match[1].replace(",", ""))
-        return f"{(low + high) / 2:.2f}"
     
-    # Convert single annual salary value
-    single_match = re.search(r"\$(\d+(?:,\d+)?)", salary)
-    if single_match:
-        return single_match.group(1).replace(",", "")
+    # Extract all numbers after the first one until a whitespace
+    numbers = re.findall(r"\d+", salary)
+    if not numbers:
+        return "N/A"
     
-    return "N/A"
+    # If the first number has fewer than 3 digits, assume it's an hourly rate
+    if len(numbers[0]) < 3:
+        hourly_rate = float(numbers[0])
+        return f"{hourly_rate * 40 * 52:.0f}"  # Convert to yearly salary
+    
+    # Otherwise, return the extracted numbers as a single string
+    return " ".join(numbers)
+
 
 df["Salary"] = df["Salary"].apply(clean_salary)
 
@@ -81,7 +83,9 @@ df["Salary"] = df["Salary"].apply(clean_salary)
 df = df[["Job Title", "Company Name", "Company Location", "Qualifications", "Salary"]]
 
 # Save cleaned data to a new CSV file
-cleaned_file_path = "cleaned_job_listings.csv"
+cleaned_file_path = "cleaned_job_listings4.csv"
 df.to_csv(cleaned_file_path, index=False, quoting=1)  # quoting=1 ensures text fields are properly quoted
-
 print(f"Cleaned data saved to {cleaned_file_path}")
+data = read_csv("cleaned_job_listings4.csv")
+salaries = data['Salary'].tolist()
+print(salaries)
