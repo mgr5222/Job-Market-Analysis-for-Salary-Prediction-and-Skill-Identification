@@ -14,7 +14,7 @@ chrome_options.add_experimental_option("detach", True)
 # Path to ChromeDriver (Update if necessary, if driver location unknown, run locateChromeDriver.py)
 chrome_driver_path = r"C:\Users\mrami\.cache\selenium\chromedriver\win64\134.0.6998.88\chromedriver.exe"
 
-def scrape_simplyhired_jobs(url, chrome_options, max_pages=9, output_file="job_listings.csv"):
+def scrape_simplyhired_jobs(url, chrome_options, max_pages=40, output_file="job_listings.csv"):
     """Scrapes job listings from SimplyHired and extracts location and qualifications."""
     
     # Initialize WebDriver
@@ -43,7 +43,7 @@ def scrape_simplyhired_jobs(url, chrome_options, max_pages=9, output_file="job_l
 
             for button in job_buttons:
                 button.click()
-                time.sleep(0.75)  # Allow time for the job details to load
+                time.sleep(2)  # Allow time for the job details to load
 
                 # Extract job location and company name
                 try:
@@ -89,7 +89,7 @@ def scrape_simplyhired_jobs(url, chrome_options, max_pages=9, output_file="job_l
                     EC.element_to_be_clickable((By.XPATH, '//a[@aria-label="Next page"]'))
                 )
                 next_button.click()
-                time.sleep(1)  # Allow time for the page to load after clicking
+                time.sleep(2)  # Allow time for the page to load after clicking
             except Exception as e:
                 print(f"Could not click 'Next' button: {e}")
                 break  # Stop if pagination fails
