@@ -115,11 +115,10 @@ def parse_qualifications(qualifications):
     except (ValueError, SyntaxError):
         return ["N/A"]
 
-def extract_skills_exp(qualifications):
-    pass
+
 
 df["Qualifications"] = df["Qualifications"].apply(parse_qualifications)
-df['Skills', 'Experience'] = df["Qualifications"].apply(extract_skills_exp)
+
 # Reorder columns
 df = df[["Standardized Job Title", "Salary", "Company Name", "Qualifications", "Job Title",  "Company Location"]]
 

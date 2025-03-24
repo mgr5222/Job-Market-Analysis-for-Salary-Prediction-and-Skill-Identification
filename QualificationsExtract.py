@@ -30,8 +30,17 @@ def search_quals(qualifications):
                 else:
                     skills_dict[skill] += 1
                     
+        
+    # reverse the created dictionary and write to file to make it easier to read and decide how to catagorize the qualifications   
     val_based_rev = {k: v for k, v in sorted(skills_dict.items(), key=lambda item: item[1], reverse=True)}
-    print(val_based_rev)
+    f = open("demofile2.txt", "a")
+    for key, value in val_based_rev.items():
+        f.write(f"{key}: {value}\n")
+    f.close()
+    #open and read the file after the appending:
+    f = open("demofile2.txt", "r")
+    print(f.read())
+
                 
     
 
