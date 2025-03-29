@@ -2,11 +2,37 @@ import pandas as pd
 from pandas import *
 import ast
 import re
+import time
 
 # Load the CSV file
 file_path = "job_listings.csv"
 df = pd.read_csv(file_path)
 
+# catagories for qualifications later in file
+prog = []
+expe = []
+comp = []
+othr = []
+# open file that has the qualification catagories
+with open("skill_qual_catagories.txt") as fp:
+    for i, line in enumerate(fp):
+        if i == 1:
+            prog = line.strip().split(", ")
+        elif i == 4:
+            expe = line.strip().split(", ")
+        elif i == 7:
+            comp = line.strip().split(", ")
+        elif i == 10:
+            othr = line.strip().split(", ")
+prog_set = set(prog)
+expe_set = set(expe)
+comp_set = set(comp)
+othr_set = set(othr)
+
+# print(prog_set)
+# print(expe_set)
+# print(comp_set)
+# print(othr_set) 
 # Handle missing values
 df.fillna("N/A", inplace=True)
 
@@ -30,7 +56,7 @@ def split_location(location):
 df[["Company Name", "Company Location"]] = df["Location"].apply(lambda x: pd.Series(split_location(str(x))))
 df.drop(columns=["Location"], inplace=True)
 
-# Mapping function for standardizing job titles
+# Mapping function for standardizing job titles (yes this is a very lazy way of doing this)
 def standardize_job_title(title):
     title_lower = title.lower()
     if 'data scientist' in title_lower:
@@ -46,7 +72,7 @@ def standardize_job_title(title):
             return 'Backend Developer'
         elif 'full stack' in title_lower or 'full-stack' in title_lower:
             return 'Full Stack Developer'
-        elif 'software' in title_lower:
+        elif 'software' in title_lower and 'engineer' in title_lower:
             return 'Software Engineer'
         elif 'engineer' in title_lower:
             return 'Engineer'
@@ -56,14 +82,8 @@ def standardize_job_title(title):
         return 'DevOps Engineer'
     elif 'cloud' in title_lower:
         return 'Cloud Engineer'
-    elif 'project manager' in title_lower:
-        return 'Project Manager'
-    elif 'manager' in title_lower:
-        return 'Product Manager'
     elif 'cybersecurity' in title_lower or 'security' in title_lower:
         return 'Cybersecurity Specialist'
-    elif 'analyst' in title_lower:
-        return 'Analyst'
     else:
         return 'Other'
 
@@ -116,11 +136,35 @@ def parse_qualifications(qualifications):
         return ["N/A"]
 
 
-
 df["Qualifications"] = df["Qualifications"].apply(parse_qualifications)
 
+
+# creates catagories of qualifications for testing for frequency of skills later
+def categorize_qualifications(qualifications):
+    skill_cat = [0,0,0,0] # [Programming Languages, Experience/Education, Computer Science Skills, Other Skills]
+    for entry in qualifications:
+        if not isinstance(entry, list):
+            entry = [entry]
+        for skill in entry:
+            #print(f"Checking skill: {skill}")
+            if skill in prog:
+                skill_cat[0] += 1
+            elif skill in expe:
+                skill_cat[1] += 1
+            elif skill in comp:
+                skill_cat[2] += 1
+            elif skill in othr:
+                skill_cat[3] += 1
+            # else:
+            #     print(f"{skill}")
+
+    #print(skill_cat)
+    return skill_cat
+
+df["Qualification Type Frequency"] = df["Qualifications"].apply(categorize_qualifications)
+#print(df["Qualification Type Frequency"])
 # Reorder columns
-df = df[["Standardized Job Title", "Salary", "Company Name", "Qualifications", "Job Title",  "Company Location"]]
+df = df[["Standardized Job Title", "Salary", "Company Name", "Qualification Type Frequency", "Qualifications", "Job Title",  "Company Location"]]
 
 # Save cleaned data to a new CSV file
 cleaned_file_path = "cleaned_job_listings.csv"

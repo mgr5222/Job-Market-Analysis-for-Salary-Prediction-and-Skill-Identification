@@ -41,7 +41,5 @@ def search_quals(qualifications):
     f = open("demofile2.txt", "r")
     print(f.read())
 
-                
-    
 
 search_quals(df['Qualifications'])
