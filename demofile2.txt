@@ -452,3 +452,457 @@ Technical writing: 1
 Basketball: 1
 Front desk: 1
 Office experience: 1
+Mid-level: 467
+Bachelor's degree: 339
+Senior level: 309
+Python: 301
+AWS: 277
+JavaScript: 261
+Communication skills: 259
+React: 256
+Computer Science: 246
+Java: 239
+Computer science: 230
+TypeScript: 200
+APIs: 198
+CI/CD: 197
+Software development: 190
+AI: 183
+3 years: 178
+SQL: 171
+Agile: 144
+5 years: 141
+CSS: 132
+HTML: 130
+Node.js: 122
+Design patterns: 119
+Kubernetes: 115
+C++: 114
+2 years: 106
+Angular: 105
+Management: 102
+Machine learning: 100
+Git: 99
+Analysis skills: 97
+Docker: 93
+Master's degree: 93
+C#: 92
+SDLC: 92
+Full-stack development: 92
+PostgreSQL: 89
+S3: 83
+Distributed systems: 81
+GitHub: 79
+NoSQL: 78
+Google Cloud Platform: 76
+REST: 75
+1 year: 75
+Data structures: 72
+DevOps: 71
+OOP: 71
+Back-end development: 69
+RESTful API: 68
+Go: 65
+Terraform: 65
+iOS: 64
+Databases: 61
+Organizational skills: 59
+Leadership: 59
+Bachelor of Science: 56
+Kotlin: 53
+Writing skills: 53
+Linux: 52
+Jenkins: 52
+Swift: 51
+IT: 51
+Kafka: 51
+Algorithms: 49
+Web development: 48
+C: 47
+Cloud infrastructure: 47
+Software deployment: 47
+Azure: 46
+Django: 46
+Relational databases: 45
+English: 44
+.NET: 44
+Software troubleshooting: 44
+Unit testing: 44
+Vue.js: 43
+Redis: 42
+Test automation: 42
+MongoDB: 42
+Trading: 41
+Scripting: 40
+Shell Scripting: 40
+System design: 40
+Test-driven development: 39
+Spring: 38
+Scala: 38
+Redux: 38
+GraphQL: 37
+UX: 37
+Law: 37
+Application development: 36
+UNIX: 36
+MySQL: 35
+Debugging: 35
+AWS Lambda: 34
+4 years: 34
+Information Systems: 33
+DynamoDB: 32
+Mentoring: 31
+System architecture: 31
+Front-end development: 31
+iOS development: 30
+Multithreading: 29
+Jira: 29
+Financial services: 29
+Microservices: 27
+Service-oriented architecture: 25
+Flask: 25
+Purchasing: 24
+A/B testing: 24
+Ruby on Rails: 23
+Splunk: 23
+Windows: 23
+UI design: 23
+SASS: 23
+Maven: 23
+Integration testing: 23
+PyTorch: 22
+Grammar Experience: 21
+Responsive web design: 21
+Figma: 21
+GitLab: 20
+Web services: 20
+Project management: 20
+Product management: 20
+Data modeling: 20
+Rust: 20
+Snowflake: 20
+7 years: 20
+Bash: 19
+React Native: 19
+Entry level: 19
+SDKs: 19
+E-commerce: 19
+Continuous improvement: 19
+Scrum: 18
+CircleCI: 18
+Sports: 18
+Apache: 17
+Negotiation: 17
+Bootstrap: 17
+Spark: 17
+Microsoft SQL Server: 16
+Confluence: 16
+Under 1 year: 16
+Oracle: 16
+Continuous integration: 16
+Martech: 16
+Computer Engineering: 16
+RabbitMQ: 16
+WebAssembly: 16
+Spring Boot: 15
+10 years: 15
+Doctoral degree: 15
+Doctor of Philosophy: 15
+Natural language processing: 15
+Computer networking: 15
+Functional testing: 14
+Performance testing: 14
+Software Engineering: 14
+Scalability: 14
+TensorFlow: 14
+Ruby: 13
+SSH: 13
+Cassandra: 13
+Time management: 13
+JSON: 13
+WordPress: 13
+Salesforce: 13
+Epic Certification: 13
+Cryptocurrency: 13
+6 years: 13
+Web analytics: 12
+Data collection: 12
+Business requirements: 12
+Adobe Analytics: 12
+Multichannel marketing: 12
+Adobe Target: 12
+Stakeholder management: 12
+Microsoft Excel: 12
+gRPC: 12
+Ethereum: 12
+Cucumber: 12
+Employment & labor law: 12
+Selenium: 12
+Mechanical knowledge: 12
+Sybase: 12
+Hibernate: 12
+SEO: 12
+SOAP: 12
+Elasticsearch: 12
+UI: 12
+Big data: 12
+Adtech: 12
+Host/hostess experience: 12
+Kanban: 11
+Mobile applications: 11
+8 years: 11
+Cloud development: 11
+Information Technology: 11
+Pricing: 11
+Ansible: 10
+Teaching: 10
+MVC: 10
+Finance: 10
+Playwright: 10
+Performance tuning: 10
+Distributed computing: 10
+SCSS: 10
+ECMAScript: 10
+Scikit-learn: 10
+Information security: 10
+DNS: 9
+VMWare: 9
+SharePoint: 9
+Metadata: 9
+AJAX: 9
+JUnit: 9
+PHP: 9
+Google Analytics: 9
+Analytics: 9
+Packaging: 9
+Data transformation: 9
+RDBMS: 9
+MCSA: 9
+Salesforce Certification: 9
+MCSE: 9
+MTA: 9
+Systems engineering: 9
+Research: 9
+Banking: 9
+Data science: 9
+SaaS: 9
+Tableau: 9
+Elixir: 9
+Machine learning libraries: 9
+Objective-C: 9
+jQuery: 8
+Citrix: 8
+Associate's degree: 8
+Mandarin: 8
+No experience needed: 8
+Power BI: 8
+Database management: 8
+Employee orientation: 8
+Master of Science: 8
+9 years: 8
+Business analysis: 8
+Business development: 8
+SVN: 8
+Portfolio management: 8
+Data visualization: 8
+Business intelligence: 8
+LAMP stack: 8
+Web design: 8
+Salt: 8
+Less: 8
+Express.js: 8
+Mac OS: 8
+AI models: 8
+Customer retention: 8
+Budgeting: 8
+NGINX: 7
+PowerShell: 7
+IaaS: 7
+Adobe Photoshop: 7
+Computer Information Systems: 7
+PaaS: 7
+Machine learning frameworks: 7
+Google Tag Manager: 7
+Growing experience: 7
+Contracts: 7
+Physics: 7
+System administration: 6
+Customer service: 6
+Database design: 6
+Software quality assurance: 6
+Test cases: 6
+Model deployment: 6
+Pandas: 6
+TCP: 5
+Vagrant: 5
+GitLab CI/CD: 5
+DHCP: 5
+Virtualization: 5
+New Relic: 5
+Perl: 5
+TCP/IP: 5
+.NET Core: 5
+DocuSign: 5
+Microsoft Office: 5
+UI development: 5
+Bloomberg: 5
+Bootcamp: 5
+Usability: 5
+Email marketing: 5
+Adobe Illustrator: 5
+Hospitality: 5
+PCI: 5
+HubSpot: 5
+Project leadership: 5
+ACH: 5
+User flows: 5
+Load balancing: 5
+Object-oriented modeling: 5
+Adobe XD: 5
+Bluebeam: 5
+ProCore: 5
+Redshift: 5
+Generative AI: 5
+N/A: 5
+Microsoft Windows Server: 4
+Microsoft Powerpoint: 4
+ITIL Certification: 4
+Engineering: 4
+Encryption: 4
+TLS: 4
+SSL: 4
+HTTPS: 4
+Microsoft Intune: 4
+Active Directory: 4
+Intune: 4
+VPN: 4
+Pegasystems: 4
+Qualtrics: 4
+ServiceNow: 4
+Kibana: 4
+Gradle: 4
+Visual Studio: 4
+SSRS: 4
+Data management: 4
+Systems analysis: 4
+Manufacturing: 4
+Middleware: 4
+High availability: 4
+Construction: 4
+Personal injury law: 4
+Cloud Native Design: 4
+Red Hat OpenShift: 4
+Azure Kubernetes Service (AKS): 4
+MLOps: 4
+Cloud computing: 4
+Vulnerability management: 4
+Spring MVC: 4
+Google Ad Manager: 4
+Jest: 4
+VueX: 4
+Data warehouse: 4
+Senior care: 4
+Data lake: 4
+Fundraising: 4
+Restaurant experience: 4
+Memcached: 4
+Chef: 4
+Svelte: 4
+Next.js: 4
+Biology: 4
+Doctor of Chemistry: 4
+Chemistry: 4
+ROI: 4
+11+ years: 4
+Ember.js: 4
+D3.js: 4
+Web accessibility: 4
+Mobile design: 4
+Product development: 4
+Sourcing: 4
+Order management system: 4
+HR sourcing: 4
+Mathematics: 4
+Pair programming: 4
+Prompt engineering: 4
+Identity & access management: 4
+Telehealth: 4
+Marketing: 4
+Blockchain: 4
+Profit & loss: 4
+Text classification: 4
+Presentation skills: 4
+Android development: 4
+JDBC: 4
+AI integration: 4
+Laravel: 4
+Looker: 4
+NumPy: 4
+Fraud prevention and detection: 4
+Paratransit: 4
+Internet of things: 4
+Firmware: 4
+Penetration testing: 4
+Vulnerability assessment: 4
+Gatsby: 4
+Accounting software: 4
+Team management: 4
+ASP.NET: 3
+COBOL: 3
+TFS: 3
+ETL: 3
+Predictive analytics: 3
+5G: 3
+Database administration: 3
+Quality assurance: 3
+Computer skills: 3
+Interviewing: 3
+Electrical Engineering: 3
+Content management systems: 3
+SRE: 3
+Groovy: 3
+BDD: 3
+Hindi: 3
+Software architecture: 3
+F#: 3
+RxSwift: 3
+LMS: 3
+Program management: 3
+Recruiting: 3
+Computer vision: 3
+Bilingual: 3
+Fine dining experience: 3
+Data analytics: 3
+AWS Certification: 2
+ISTQB Certification: 2
+Release management: 2
+Live chat: 2
+Statistics: 2
+R: 2
+Keras: 2
+Firewall: 2
+BGP: 2
+Bamboo: 2
+AWS Certified DevOps Engineer – Professional: 2
+B2C: 2
+Change management: 2
+ArcGIS: 1
+Cloud architecture: 1
+Investment banking: 1
+Technical support: 1
+High school diploma or GED: 1
+Hadoop: 1
+Wireframing: 1
+RBAC: 1
+Hypothesis testing: 1
+Model evaluation: 1
+Data manipulation: 1
+Flutter: 1
+Akka: 1
+Confidential Clearance: 1
+AWS Certified Solutions Architect – Professional: 1
+Software implementation: 1
+Technical writing: 1
+Basketball: 1
+Front desk: 1
+Office experience: 1
