@@ -88,7 +88,7 @@ plt.subplot(1, 3, 1)
 plt.scatter(y_test_filtered, y_test_filtered, alpha=0.6, color='blue', label='Actual')  # Actual values in blue
 plt.scatter(y_test_filtered, lin_reg_predictions_filtered, alpha=0.6, color='red', label='Predicted')  # Predicted values in red
 plt.plot([y_test_filtered.min(), y_test_filtered.max()], [y_test_filtered.min(), y_test_filtered.max()], 'k--', lw=2)
-plt.title("Linear Regression: Actual vs Predicted (Outliers Removed)")
+plt.title("Linear Regression: Actual vs Predicted")
 plt.xlabel("Actual Salary")
 plt.ylabel("Predicted Salary")
 plt.legend()
@@ -98,7 +98,7 @@ plt.subplot(1, 3, 2)
 plt.scatter(y_test_filtered, y_test_filtered, alpha=0.6, color='blue', label='Actual')  # Actual values in blue
 plt.scatter(y_test_filtered, xgb_predictions_filtered, alpha=0.6, color='red', label='Predicted')  # Predicted values in red
 plt.plot([y_test_filtered.min(), y_test_filtered.max()], [y_test_filtered.min(), y_test_filtered.max()], 'k--', lw=2)
-plt.title("XGBoost: Actual vs Predicted (Outliers Removed)")
+plt.title("XGBoost: Actual vs Predicted")
 plt.xlabel("Actual Salary")
 plt.ylabel("Predicted Salary")
 plt.legend()
@@ -108,7 +108,7 @@ plt.subplot(1, 3, 3)
 plt.scatter(y_test_filtered, y_test_filtered, alpha=0.6, color='blue', label='Actual')  # Actual values in blue
 plt.scatter(y_test_filtered, rf_predictions_filtered, alpha=0.6, color='red', label='Predicted')  # Predicted values in red
 plt.plot([y_test_filtered.min(), y_test_filtered.max()], [y_test_filtered.min(), y_test_filtered.max()], 'k--', lw=2)
-plt.title("Random Forest: Actual vs Predicted (Outliers Removed)")
+plt.title("Random Forest: Actual vs Predicted")
 plt.xlabel("Actual Salary")
 plt.ylabel("Predicted Salary")
 plt.legend()
